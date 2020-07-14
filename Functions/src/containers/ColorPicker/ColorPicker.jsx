@@ -8,21 +8,27 @@ export default function ColorPicker() {
   const [text, setText] = useState('My really awesome text')
 
   const handleChange = ({ target }) => {
-    switch (target.name) {
-      case 'color':
-        setColor(target.value);
-        break;
-      case 'backgroundColor':
-        setBackgroundColor(target.value);
-        break;
-      case 'text':
-        setText(target.value);
-        break;
-    }
+    const inputSetterFactory = {
+      color: setColor,
+      backgroundColor: setBackgroundColor,
+      text: setText
+    };
+    inputSetterFactory[target.name](target.value);
 
-    if (target.name === 'color') setColor(target.value);
-    if (target.name === 'backgroundColor') setBackgroundColor(target.value);
-    if (target.name === 'text') setText(target.value);
+    // switch (target.name) {
+    //   case 'color':
+    //     setColor(target.value);
+    //     break;
+    //   case 'backgroundColor':
+    //     setBackgroundColor(target.value);
+    //     break;
+    //   case 'text':
+    //     setText(target.value);
+    //     break;
+    // }
+    // if (target.name === 'color') setColor(target.value);
+    // if (target.name === 'backgroundColor') setBackgroundColor(target.value);
+    // if (target.name === 'text') setText(target.value);
   }
 
   return (
