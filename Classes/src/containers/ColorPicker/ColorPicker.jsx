@@ -13,8 +13,16 @@ export default class ColorPicker extends Component {
     const { color, backgroundColor, text } = this.state;
     return (
       <>
-        <Controls />
-        <Display color={color} backgroundColor={backgroundColor} text={text} />
+        <Controls
+          color={color}
+          backgroundColor={backgroundColor}
+          text={text}
+        />
+        <Display
+          color={color}
+          backgroundColor={backgroundColor}
+          text={text}
+        />
       </>
     )
   }
