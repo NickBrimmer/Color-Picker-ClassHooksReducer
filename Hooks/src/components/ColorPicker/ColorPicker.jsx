@@ -5,7 +5,7 @@ import { useColorPicker } from '../../hooks/color';
 
 
 export default function ColorPicker() {
-  const { color, backgroundColor, text } = useColorPicker();
+
   return (
     <>
       <Controls
