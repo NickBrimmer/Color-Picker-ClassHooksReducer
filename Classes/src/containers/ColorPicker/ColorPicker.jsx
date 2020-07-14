@@ -27,7 +27,6 @@ export default class ColorPicker extends Component {
           color={color}
           backgroundColor={backgroundColor}
           text={text}
-          onChange={this.handleChange}
         />
       </>
     )
