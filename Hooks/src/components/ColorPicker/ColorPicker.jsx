@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Moods = () => {
+
+export default function ColorPicker() {
   return (
     <>
     </>
   );
-};
-
-export default Moods;
+}
