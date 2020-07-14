@@ -9,6 +9,10 @@ export default class ColorPicker extends Component {
     text: 'My Very Interesting App'
   }
 
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
+  }
+
   render() {
     const { color, backgroundColor, text } = this.state;
     return (
@@ -17,11 +21,13 @@ export default class ColorPicker extends Component {
           color={color}
           backgroundColor={backgroundColor}
           text={text}
+          onChange={this.handleChange}
         />
         <Display
           color={color}
           backgroundColor={backgroundColor}
           text={text}
+          onChange={this.handleChange}
         />
       </>
     )
