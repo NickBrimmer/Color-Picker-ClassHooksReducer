@@ -3,16 +3,16 @@ import Controls from '../Controls/Controls';
 import Display from '../Display/Display';
 import { useColorPicker } from '../../hooks/color';
 
+export default function ColorPicker() {
+  const { color, backgroundColor, text, handleChange } = useColorPicker();
 
-const ColorPicker = () => {
-  const { color, backgroundColor, text } = useColorPicker();
   return (
     <>
       <Controls
         color={color}
         backgroundColor={backgroundColor}
         text={text}
-      // onChange={}
+        onChange={handleChange}
       />
       <Display
         color={color}
@@ -22,5 +22,3 @@ const ColorPicker = () => {
     </>
   );
 }
-
-export default ColorPicker;

@@ -5,5 +5,11 @@ export const useColorPicker = () => {
   const [backgroundColor, setBackgroundColor] = useState('FFFFFF');
   const [text, setText] = useState('My awesome text!')
 
+  const handleChange = ({ target }) => {
+    if (target.name === 'color') setColor(target.value);
+    if (target.name === 'backgroundColor') setBackgroundColor(target.value);
+    if (target.name === 'text') setText(target.value);
+  }
+
   return { color, backgroundColor, text };
 }
