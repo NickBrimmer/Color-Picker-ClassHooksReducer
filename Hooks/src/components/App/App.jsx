@@ -4,4 +4,3 @@ import ColorPicker from '../ColorPicker/ColorPicker';
 export default function App() {
   return <ColorPicker />;
 }
-  

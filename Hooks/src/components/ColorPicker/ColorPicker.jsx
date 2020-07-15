@@ -4,7 +4,7 @@ import Display from '../Display/Display';
 import { useColorPicker } from '../../hooks/color';
 
 
-export default function ColorPicker() {
+const ColorPicker = () => {
   const { color, backgroundColor, text } = useColorPicker();
   return (
     <>
@@ -22,3 +22,5 @@ export default function ColorPicker() {
     </>
   );
 }
+
+export default ColorPicker;
