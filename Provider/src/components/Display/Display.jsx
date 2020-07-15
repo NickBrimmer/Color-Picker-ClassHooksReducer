@@ -1,7 +1,10 @@
 import React from 'react';
-import { useColorContext } from '../../hooks/ColorPickerProvider';
+import { useColorContext, useColor, useBackgroundColor, useText } from '../../hooks/ColorPickerProvider';
 
 const Display = () => {
+  const color = useColor();
+  const backgroundColor = useBackgroundColor();
+  const text = useText();
 
   return (
     <section style={{ color, backgroundColor }}>
