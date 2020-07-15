@@ -12,5 +12,19 @@ export const ColorPickerProvider = ({ children }) => {
       {children}
     </ColorContext.Provider>
   )
+}
 
+export const useColor = () => {
+  const { color } = useContext(ColorContext);
+  return color;
+}
+
+export const useBackgroundColor = () => {
+  const { backgroundColor } = useContext(ColorContext);
+  return backgroundColor;
+}
+
+export const useText = () => {
+  const { text } = useContext(ColorContext);
+  return text;
 }
