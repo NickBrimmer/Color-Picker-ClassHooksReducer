@@ -11,5 +11,5 @@ export const useColorPicker = () => {
     if (target.name === 'text') setText(target.value);
   }
 
-  return { color, backgroundColor, text };
+  return { color, backgroundColor, text, handleChange };
 }
